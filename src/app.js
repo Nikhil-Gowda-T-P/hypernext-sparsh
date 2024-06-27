@@ -4,6 +4,8 @@ const cors = require('cors');
 const bodyParser = require("body-parser");
 const app = express();
 const studentRouter=require("./routers/student.router");
+const resultRouter=require('./routers/result.router')
+const attendanceRouter=require('./routers/attendance.router')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -27,5 +29,7 @@ app.get("/",(req, res)=>{
    );
 
 app.use('/student',studentRouter)
+app.use('/result',studentRouter)
+app.use('/attendance',studentRouter)
    
 

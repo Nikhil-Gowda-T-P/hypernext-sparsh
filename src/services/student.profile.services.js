@@ -13,6 +13,7 @@ const addStudent = async (body) => {
         return await profileQuery.addStudent(result);
     
     } catch(error) {
+        console.log(error)
         throw error
     }
 };
